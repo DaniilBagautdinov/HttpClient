@@ -14,11 +14,11 @@ public class HttpClient implements HttpClientInterface{
         Map<String, String> hashMap1 = new HashMap<>();
         Map<String, String> hashMap2 = new HashMap<>();
         hashMap1.put("Content-Type","application/json");
-//        hashMap1.put("Accept","application/json");
+        hashMap1.put("Accept","application/json");
         hashMap2.put("x-forwarded-proto","https");
         hashMap2.put("x-forwarded","https");
 
-        System.out.println(new HttpClient().get("https://postman-echo.com/get", hashMap1, hashMap2));
+        System.out.println(new HttpClient().post("https://postman-echo.com/post", hashMap1, hashMap2));
     }
 
     @Override
@@ -59,21 +59,6 @@ public class HttpClient implements HttpClientInterface{
                 connection.setRequestProperty(pair.getKey(),pair.getValue());
             }
 
-//            try (final DataOutputStream outputStream = new DataOutputStream(connection.getOutputStream())){
-//                int count = 0;
-////                outputStream.writeBytes("{");
-//                for (Map.Entry<String,String> pair: params.entrySet()){
-//                    if(count < params.entrySet().size()-1) {
-//                        outputStream.writeBytes(pair.getKey() + ":" + pair.getValue() +",");
-//                    }else {
-//                        outputStream.writeBytes(pair.getKey() + ":" + pair.getValue());
-//                    }
-//                    count++;
-//                }
-//
-//            }
-//
-//            System.out.println("\"");
             String jsonInputString = "{";
             int count = 0;
             for (Map.Entry<String, String> pair : params.entrySet()) {
@@ -87,13 +72,10 @@ public class HttpClient implements HttpClientInterface{
             jsonInputString += "}";
 
 
-            System.out.println(jsonInputString);
-
             connection.setDoOutput(true);
             try (OutputStream outputStream = connection.getOutputStream()) {
                 byte[] input = jsonInputString.getBytes(StandardCharsets.UTF_8);
                 outputStream.write(input, 0, input.length);
-                System.out.println(outputStream);
             }
 
             System.out.println(connection.getResponseCode());
