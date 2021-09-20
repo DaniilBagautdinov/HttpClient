@@ -1,4 +1,4 @@
-package ru.kpfu.itis.bagautdinov;
+package ru.kpfu.itis.bagautdinov.net;
 
 import java.util.Map;
 

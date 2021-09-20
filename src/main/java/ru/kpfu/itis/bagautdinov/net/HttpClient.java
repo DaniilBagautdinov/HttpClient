@@ -1,14 +1,13 @@
-package ru.kpfu.itis.bagautdinov;
+package ru.kpfu.itis.bagautdinov.net;
 
 import java.io.*;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Map;
 
-public class HttpClient implements HttpClientInterface{
+public class HttpClient implements HttpClientInterface {
 
     public static void main(String[] args) {
         Map<String, String> hashMap1 = new HashMap<>();
