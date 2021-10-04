@@ -1,0 +1,1 @@
+alter table author_of_the_news rename to author_of_the_news_check
