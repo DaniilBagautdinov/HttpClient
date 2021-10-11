@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="SqlDialectMappings">
-    <file url="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/bagautdinov/dbscripts/V1__Create_all_tables.sql" dialect="GenericSQL" />
-    <file url="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/bagautdinov/dbscripts/V2__Fill_all_tables.sql" dialect="GenericSQL" />
-    <file url="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/bagautdinov/dbscripts/V3__Create_views.sql" dialect="GenericSQL" />
-    <file url="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/bagautdinov/dbscripts/V4__Rename_view.sql" dialect="GenericSQL" />
-  </component>
-</project>
